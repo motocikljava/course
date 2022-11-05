@@ -1,14 +1,14 @@
 public class EmployeeMet {
-    Employee[] Met;
+    Employee[] met;
 
     public EmployeeMet(int size) {
-        this.Met = new Employee[size];
+        this.met = new Employee[size];
     }
 
     public void addEmployeeMet(String name, int department, double cash) {
-        for (int i = 0; i < Met.length; i++) {
-            if (Met[i] == null) {
-                Met[i] = new Employee(name, department, cash);
+        for (int i = 0; i < met.length; i++) {
+            if (met[i] == null) {
+                met[i] = new Employee(name, department, cash);
                 return;
             }
         }
@@ -16,33 +16,34 @@ public class EmployeeMet {
 
     public double findAllCashMonth() {
         double sum = 0;
-        for (int i = 0; i < Met.length; i++) {
-            sum += Met[i].getCashe();
+        for (int i = 0; i < met.length; i++) {
+            sum += met[i].getCashe();
         }
         return sum;
     }
 
     public double findAveregeCash() {
-        double averageSalary = 0;
-        for (int i = 0; i < Met.length; i++) {
-            averageSalary += Met[i].getCashe() / Met.length;
+        double avevageSalary = 0;
+        for (int i = 0; i < met.length; i++) {
+            avevageSalary = findAllCashMonth() / met.length;
         }
-        return averageSalary;
+       return avevageSalary;
     }
 
     public double findMaxCash() {
-        double maxCash = 0;
-        for (int i = 0; i < Met.length; i++) {
-            if (Met[i].getCashe() > maxCash) {
-                maxCash = Met[i].getCashe();
+        double maxCash = met[0].getCashe();
+        for (int i = 0; i < met.length; i++) {
+            if (met[i].getCashe() > maxCash) {
+                maxCash = met[i].getCashe();
             }
         }
         return maxCash;
-    }public double findMinCash() {
-        double minCash = 0;
-        for (int i = 0; i < Met.length; i++) {
-            if (Met[i].getCashe() < Met[0].getCashe() - 1) {
-                minCash = Met[i].getCashe();
+    }
+    public double findMinCash() {
+        double minCash = met[0].getCashe();
+        for (int i = 0; i < met.length; i++) {
+            if (met[i].getCashe() < minCash - 1) {
+                minCash = met[i].getCashe();
             }
 
         }
@@ -50,16 +51,16 @@ public class EmployeeMet {
     }
 
     public void printEmployee() {
-        for (int i = 0; i < Met.length; i++) {
-            if (Met != null) {
-                System.out.println(Met[i].toString());
+        for (int i = 0; i < met.length; i++) {
+            if (met != null) {
+                System.out.println(met[i].toString());
             }
         }
     }
 
     public void officeName() {
-        for (int i = 0; i < Met.length; i++) {
-            System.out.println(Met[i].getName());
+        for (int i = 0; i < met.length; i++) {
+            System.out.println(met[i].getName());
         }
 
     }

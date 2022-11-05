@@ -8,7 +8,7 @@ public class Main {
         employeeCreate.addEmployeeMet("Nizshe Fridrich Ubermenovich", 5, 22_000);
         employeeCreate.addEmployeeMet("Targarien Deineris Aerysovna", 4, 21_000);
         employeeCreate.addEmployeeMet("Mishkin  Algernon Flowersovich", 4, 20_000);
-        employeeCreate.addEmployeeMet("Popitov Simpl Dimplovich", 5, 17_000);
+        employeeCreate.addEmployeeMet("Popitov Simpl Dimplovich", 5, 12_000);
         employeeCreate.addEmployeeMet("Maria Skłodowska-Curie", 3, 18_000);
         employeeCreate.addEmployeeMet("Telepuzikova LaaLaa", 1, 45_000);
         employeeCreate.addEmployeeMet("Blake Daphne Scooby-Doomovna", 2, 29_000);
@@ -17,7 +17,7 @@ public class Main {
         String cashMonth = MessageFormat.format(s,"Суммарная",  employeeCreate.findAllCashMonth());
         System.out.println(cashMonth);
         employeeCreate.separator();
-        String averageCash = MessageFormat.format(s,"Средняя",  employeeCreate.findAveregeCash());
+        String averageCash = MessageFormat.format(s,"Средняя", employeeCreate.findAveregeCash());
         System.out.println(averageCash);
         employeeCreate.separator();
         String s2 = "{0} зарплата сотрудника составляет {1} рублей";

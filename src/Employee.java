@@ -1,9 +1,24 @@
+import java.util.Objects;
+
 public class Employee {
 private String name;
 private int department;
 private double cash;
 private static int counter;
 private final int id;
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Employee employee = (Employee) o;
+        return department == employee.department && Double.compare(employee.cash, cash) == 0 && id == employee.id && name.equals(employee.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, department, cash, id);
+    }
 
     @Override
     public String toString() {
